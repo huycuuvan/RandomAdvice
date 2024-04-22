@@ -1,38 +1,101 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  background: hsl(218, 23%, 16%);
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+.container {
+  background-color: #323a49;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 24px;
+  border-radius: 15px;
+  justify-content: center;
+  /* position: relative;s */
+  height: 332px;
+  width: 540px;
+}
+
+h1 {
+  color: #52ffa8;
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 700;
+  /* padding: 88px 0px 38px 0px; */
+  padding-bottom: 38px;
+}
+
+.text {
+  color: #cee3e9;
+  font-size: 22px;
+  padding: 0px 0px 17px;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  text-align: center;
+  /* width: 100px; */
+}
+
+picture {
+  display: inline;
+  padding: 17px 0px;
+}
+
+.dice {
+  background-color: #52ffa8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: absolute;
+  transition: box-shadow 0.3s ease-in-out;
+  margin-top: 320px;
+}
+
+.dice:hover {
+  box-shadow: #53ffa9 0px 0px 3.29106px 1.64553px;
+  cursor: pointer;
+}
+.container:hover {
+  box-shadow: 0 10px 10px rgb(83 255 169 / 10%);
+}
+.credit {
+  color: #cee3e9;
+  font-size: 12px;
+  margin-top: 480px;
+  position: absolute;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.credit a {
+  color: #52ffa8;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 600px) {
+  .card {
+    border-radius: 15px;
+    height: 332px;
+    width: 540px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .card .text {
+    font-size: 22px;
   }
 }
